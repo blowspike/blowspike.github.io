@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Preklik</title>
+    <link rel="stylesheet" href="preklik.css">
+    <link rel="icon" href="SPS-Martin.svg">
 </head>
 <body>
     <h1>Preklik</h1>
-    <a href="index.html">Index</a>
+    <a href="index.html"><h2>Index</h2></a>
+    <h2 id="cas"></h2>
 </body>
+<script>
+    const casElment = document.getElementById("cas");
+
+    function updateCas(){
+        const teraz = new Date();
+        const formatovanyCas = teraz.toLocaleTimeString();
+        casElment.textContent = formatovanyCas;
+    }
+
+    updateCas();
+    setInterval(updateCas, 1000);
+</script>
 </html>
